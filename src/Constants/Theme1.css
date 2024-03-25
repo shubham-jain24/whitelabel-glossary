@@ -1,0 +1,6 @@
+html {
+  --primary-color: antiquewhite;
+  --secondary-color: #000;
+  --tertiary-color: #ff0;
+  --primary-bg-color: hsl(40, 100%, 44%);
+}

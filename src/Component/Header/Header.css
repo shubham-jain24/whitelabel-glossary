@@ -1,0 +1,25 @@
+.header-parent {
+  height: 15%;
+  background-color: var(--primary-color);
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.page-header-logo {
+  height: 100%;
+  display: flex;
+  float: left;
+  padding-left: 1%;
+}
+
+.page-header-text {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: xx-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 800;
+}

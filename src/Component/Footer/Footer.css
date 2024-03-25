@@ -1,0 +1,45 @@
+.footer-main {
+  display: flex;
+  min-height: 15%;
+  width: 100%;
+  margin: 0px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
+
+.footer-bg {
+  background-color: var(--primary-color);
+}
+
+.contact-icon {
+  mix-blend-mode: darken;
+  width: 7%;
+  aspect-ratio: 2/2;
+  padding-right: 1%;
+}
+
+.contact-box {
+  display: flex;
+  padding: 0.5%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-logo-image {
+  mix-blend-mode: darken;
+  width: 7%;
+  aspect-ratio: 3/2;
+  padding-right: 1%;
+  object-fit: contain;
+}
+
+.social-logo {
+}
+
+.social-link {
+  display: flex;
+}
