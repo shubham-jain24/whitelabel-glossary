@@ -29,7 +29,7 @@ const MainPage: React.FC<Props> = (props) => {
   return (
     <div className="application-base">
       <Header {...loadHeaderProps()} />
-      <div className="body-data">hello there</div>
+      <div className="body-data"></div>
       <Footer {...loadFooterProps()} />
     </div>
   );
