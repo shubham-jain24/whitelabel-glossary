@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import CreatBlogPost from "../CreateBlogPost/CreateBlogPost";
 import { TextData } from "../../Temp/TextData";
 import "./MainPage.css";
 type OwnProps = {
@@ -29,7 +30,9 @@ const MainPage: React.FC<Props> = (props) => {
   return (
     <div className="application-base">
       <Header {...loadHeaderProps()} />
-      <div className="body-data"></div>
+      <div className="body-data">
+        <CreatBlogPost/>
+      </div>
       <Footer {...loadFooterProps()} />
     </div>
   );

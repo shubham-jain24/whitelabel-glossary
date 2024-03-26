@@ -1,9 +1,7 @@
 .application-base {
   background-color: var(--primary-bg-color);
-  height: 100%;
-  width: 100%;
 }
 
 .body-data {
-  height: 70%;
+  min-height: 60%;
 }

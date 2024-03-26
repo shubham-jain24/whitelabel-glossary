@@ -1,0 +1,66 @@
+.create-post{
+    padding: 5%;
+}
+
+.editor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.button-design{
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.preview-button{
+    margin-right: 2%;
+    border: none;
+    background-color: var(--primary-button-color);
+    padding: 0.2%;
+    font-weight: 600;
+}
+
+.editor-button{
+    border: none;
+    background-color: var(--secondary-button-color);
+    font-weight: 600;
+    padding: 0.2%;
+
+}
+
+.jodit-status-bar__item{
+    display: none;
+}
+
+.personal-details{
+    display: flow;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+.label{
+    font-weight: 500;
+    padding-bottom: 3px;
+}
+
+.input-text{
+    border: none;
+    font-size: medium;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.input-text:focus{
+    border: none;
+}
+
+.post-button{
+    padding: 0.5%;
+    font-weight: 600;
+    background-color: var(--success-button);
+    border: none;
+}

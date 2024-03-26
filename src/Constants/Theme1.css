@@ -3,4 +3,7 @@ html {
   --secondary-color: #000;
   --tertiary-color: #ff0;
   --primary-bg-color: hsl(40, 100%, 44%);
+  --primary-button-color: #62c6ed;
+  --secondary-button-color: rgb(231, 235, 116);
+  --success-button: rgb(65, 228, 84);
 }
