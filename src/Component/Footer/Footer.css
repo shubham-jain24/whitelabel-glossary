@@ -13,6 +13,7 @@
 
 .footer-bg {
   background-color: var(--primary-color);
+  height: auto !important;
 }
 
 .contact-icon {
@@ -48,4 +49,12 @@
   display: flex;
   justify-content: flex-end;
   padding: 1%;
+}
+
+.create-post-heading{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 1%;
+  font-weight: 700;
 }

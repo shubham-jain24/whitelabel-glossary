@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import CreatBlogPost from "../CreateBlogPost/CreateBlogPost";
+import  DisplayBlog from "../DisplayBlog/DisplayBlog";
 import { TextData } from "../../Temp/TextData";
 import "./MainPage.css";
 type OwnProps = {
@@ -32,6 +33,7 @@ const MainPage: React.FC<Props> = (props) => {
       <Header {...loadHeaderProps()} />
       <div className="body-data">
         <CreatBlogPost/>
+        <DisplayBlog/>
       </div>
       <Footer {...loadFooterProps()} />
     </div>

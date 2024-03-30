@@ -1,0 +1,21 @@
+.blog-class-main{
+    margin: 10%;
+    background-color: var(--post-bg-color);
+    padding: 2%;
+}
+
+.display-blog-expanded{
+    
+}
+
+.display-blog-collapsed{
+    height: 30%;
+    overflow: hidden;
+}
+
+.show-more-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: medium;
+}
