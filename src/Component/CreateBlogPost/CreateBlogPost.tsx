@@ -11,11 +11,10 @@ const CreatBlogPost: React.FC<Props> = (props) => {
     const [editorContent,setEditorContent] = React.useState('');
     const [authorName, setAuthorName] = React.useState('');
     const [authorAge, setAuthorAge] = React.useState('');
-    const [viewer, setViewer] = React.useState(false);
 
     const authorPersonalDetails = () => {
         return (
-            <div className="personal-details">
+            <div>
                 <div>
                     <div className="label">Author Name:</div>
                     <input className="input-text" type="text" value={authorName} onChange={(event) => setAuthorName(event.target.value)}></input>
@@ -33,8 +32,8 @@ const CreatBlogPost: React.FC<Props> = (props) => {
 
     const textEditor = () => {
         return (
-            <div>
-                <JoditEditor className="editor" ref={editor} value={editorContent} onChange={newContent => setEditorContent(newContent)}/>
+            <div className="editor">
+                <JoditEditor ref={editor} value={editorContent} onChange={newContent => setEditorContent(newContent)}/>
             </div>
         )
     }
