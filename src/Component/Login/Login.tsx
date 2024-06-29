@@ -1,13 +1,13 @@
 import React from "react";
 import axios from 'axios';
-import { getThemeColor, themingProps } from '../../Constants/Theme';
+import ThemeContext from "../../Utils/ThemeContext";
 
 type Props = {
     whitelabelId: string;
 }
 
 const Login: React.FC<Props> = (props) => {
-    const theme: themingProps = getThemeColor(props.whitelabelId);
+    const themeContext = React.useContext(ThemeContext);
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -33,7 +33,7 @@ const Login: React.FC<Props> = (props) => {
     }
 
     return (
-        <div className={`w-6/12 flex ${theme.bgSecond} ${theme.textFirst} font-bold flex-col rounded-md shadow-2xl m-auto my-40 p-4`}>
+        <div className={`w-6/12 flex ${themeContext.bgSecond} ${themeContext.textFirst} font-bold flex-col rounded-md shadow-2xl m-auto my-40 p-4`}>
             <div>
                 <div className={`my-2`}>
                     Email
@@ -51,7 +51,7 @@ const Login: React.FC<Props> = (props) => {
                 </div>
             </div>
             <div className="flex justify-center mt-5">
-                <button className={`${theme.bgFirst} ${theme.textFifth} w-1/2 p-2 m-4 rounded-md shadow-xl`} onClick={() => authenticateUser()}> Login </button>
+                <button className={`${themeContext.bgFirst} ${themeContext.textFifth} w-1/2 p-2 m-4 rounded-md shadow-xl`} onClick={() => authenticateUser()}> Login </button>
             </div>
         </div>
     )

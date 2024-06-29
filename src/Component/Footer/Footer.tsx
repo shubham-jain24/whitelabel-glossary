@@ -1,5 +1,5 @@
 import React from "react";
-import { getThemeColor, themingProps } from '../../Constants/Theme';
+import ThemeContext from "../../Utils/ThemeContext";
 
 type OwnProps = {
   email: string;
@@ -10,18 +10,18 @@ type OwnProps = {
 type Props = OwnProps;
 
 const Footer: React.FC<Props> = (props) => {
-  const theme: themingProps = getThemeColor(props.whitelabelId);
+  const themeContext = React.useContext(ThemeContext);
   const loadContactDetails = () => {
     return (
       <div className="">
-        <div className={`flex items-center p-2 ${theme.textFourth}`}>
+        <div className={`flex items-center p-2 ${themeContext.textFourth}`}>
           <img
             className="w-6 me-2"
             src="src/Assets/Images/Logo/Email.png"
           />
           <span>{props.email}</span>
         </div>
-        <div className={`flex items-center p-2 ${theme.textFourth}`}>
+        <div className={`flex items-center p-2 ${themeContext.textFourth}`}>
           <img
             className="w-6 me-2"
             src="src/Assets/Images/Logo/Phone.png"
@@ -52,12 +52,12 @@ const Footer: React.FC<Props> = (props) => {
   };
 
   const designerMessage = () => {
-    return <div className={`${theme.textFifth} flex justify-end me-2`}>Created By: Shubham Jain </div>;
+    return <div className={`${themeContext.textFifth} flex justify-end me-2`}>Created By: Shubham Jain </div>;
   };
 
   return (
-    <div className={`${theme.bgFirst} inset-x-0 bottom-0`}>
-      <div className={`${theme.textFourth} flex justify-center p-3 text-lg`}>Connect With Me!</div>
+    <div className={`${themeContext.bgFirst} inset-x-0 bottom-0`}>
+      <div className={`${themeContext.textFourth} flex justify-center p-3 text-lg`}>Connect With Me!</div>
       <div className="flex justify-between">
         {loadContactDetails()}
         {loadSocialNetwork()}

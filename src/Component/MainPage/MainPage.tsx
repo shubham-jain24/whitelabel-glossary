@@ -6,10 +6,9 @@ import  DisplayBlog from "../DisplayBlog/DisplayBlog";
 import { TextData } from "../../Temp/TextData";
 import Login from "../Login/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-
+import ThemeContext from "../../Utils/ThemeContext";
 import Signup from "../Signup/Signup";
-import { whitelabelId } from "../../App";
-import { getThemeColor, themingProps } from '../../Constants/Theme';
+
 type OwnProps = {
   whitelabelId: string;
 };
@@ -17,7 +16,7 @@ type OwnProps = {
 type Props = OwnProps;
 
 const MainPage: React.FC<Props> = (props) => {
-  const theme: themingProps = getThemeColor(props.whitelabelId);
+  const themeContext = React.useContext(ThemeContext);
   const testData = TextData();
   console.log(testData);
   const loadHeaderProps = () => {
@@ -38,7 +37,7 @@ const MainPage: React.FC<Props> = (props) => {
 
   const AppLayout = () => {
     return (
-      <div className={`${theme.bgFourth} flex flex-col min-h-[100%]`}>
+      <div className={`${themeContext.bgFourth} flex flex-col min-h-[100%]`}>
         <Header {...loadHeaderProps()} />
         <div className="min-h-[100vh]">
           <Outlet></Outlet>
@@ -55,11 +54,11 @@ const MainPage: React.FC<Props> = (props) => {
       children: [
         {
           path: "/",
-          element: <><DisplayBlog whitelabelId={props.whitelabelId}/><DisplayBlog whitelabelId={props.whitelabelId}/></>
+          element: <><DisplayBlog /><DisplayBlog /></>
         },
         {
           path: "/create",
-          element: <CreatBlogPost whitelabelId={props.whitelabelId}/>
+          element: <CreatBlogPost />
         },
         {
           path: "/login",
@@ -70,7 +69,7 @@ const MainPage: React.FC<Props> = (props) => {
           element: <Signup whitelabelId={props.whitelabelId}></Signup>
         }
       ],
-      errorElement: <DisplayBlog whitelabelId={props.whitelabelId}/>
+      errorElement: <DisplayBlog />
     }
   ];
 
