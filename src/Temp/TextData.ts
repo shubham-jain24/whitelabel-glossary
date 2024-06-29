@@ -20,8 +20,8 @@ const TextData = (): PageData => {
     },
     personalDetails: {
       name: "",
-      email: "shubhjain24999@gmail.com",
-      phone: "9212046872",
+      email: "shubhjain@gmail.com",
+      phone: "9289046872",
       instaAccountLink: "",
       linkedInAccountLink: "",
       twitterAccountLink: "",

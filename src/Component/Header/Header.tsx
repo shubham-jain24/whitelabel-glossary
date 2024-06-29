@@ -16,7 +16,7 @@ const Header: React.FC<Props> = (props) => {
   const headerLogo = () => {
     return (
       <span className="flex p-2 w-24">
-        <img src={props.logo} />
+        <img src={`src/Assets/Images/Logo/${props.whitelabelId}.png`} />
       </span>
     );
   };

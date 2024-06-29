@@ -7,13 +7,20 @@ import { getThemeColor, themingProps } from '../src/Constants/Theme';
 import { Provider } from 'react-redux';
 import appStore from "./Store/appStore";
 
-// console.log(window.location.hostname);
+const getWhitelabelId = (hostName: string): string => {
+  switch(hostName){
+    case "http://127.0.0.1:3001":
+      return "1"
+    case "http://127.0.0.1:3002":
+      return "2"
+    case "http://127.0.0.1:3003":
+      return "3"
+    default:
+      return "1"
+  }
+}
 
-// const getWhitelabelId = (hostName: string) => {
-
-// }
-
-const whitelabelId = "1";
+const whitelabelId = getWhitelabelId(window.location.origin);
 
 const rootElement = document.getElementById("root")!;
 const root = ReactDOM.createRoot(rootElement);
