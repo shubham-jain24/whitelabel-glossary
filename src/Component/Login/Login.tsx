@@ -1,12 +1,18 @@
 import React from "react";
 import axios from 'axios';
 import ThemeContext from "../../Utils/ThemeContext";
+import { useDispatch, useSelector } from "react-redux";
+import { updateUserDetails } from "../../Store/userSlice";
+import { UserDetails } from "../../Store/UserDetails";
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
     whitelabelId: string;
 }
 
 const Login: React.FC<Props> = (props) => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const themeContext = React.useContext(ThemeContext);
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -20,7 +26,16 @@ const Login: React.FC<Props> = (props) => {
         axios.post('/Prod/Login', (body))
         .then(response => {
             if (response.data.body.status == "Success") {
-                console.log(response.data.body.data)
+                const result = response.data.body;
+                const payload: UserDetails = {
+                    userId: result.UserId,
+                    age: result.Age,
+                    userName: result.Name
+                }
+                dispatch(updateUserDetails(payload));
+                setEmail('');
+                setPassword('');
+                navigate('/');
             }
             else {
                 console.log("auth error");

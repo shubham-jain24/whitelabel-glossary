@@ -2,12 +2,12 @@ import React, { Children } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import CreatBlogPost from "../CreateBlogPost/CreateBlogPost";
-import  DisplayBlog from "../DisplayBlog/DisplayBlog";
 import { TextData } from "../../Temp/TextData";
 import Login from "../Login/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import ThemeContext from "../../Utils/ThemeContext";
 import Signup from "../Signup/Signup";
+import DisplayPostList from "../DisplayPostList/DisplayPostList";
 
 type OwnProps = {
   whitelabelId: string;
@@ -18,7 +18,6 @@ type Props = OwnProps;
 const MainPage: React.FC<Props> = (props) => {
   const themeContext = React.useContext(ThemeContext);
   const testData = TextData();
-  console.log(testData);
   const loadHeaderProps = () => {
     return {
       logo: testData.pageDetails.logo,
@@ -54,11 +53,11 @@ const MainPage: React.FC<Props> = (props) => {
       children: [
         {
           path: "/",
-          element: <><DisplayBlog /><DisplayBlog /></>
+          element: <DisplayPostList whitelabelId={props.whitelabelId}/>
         },
         {
           path: "/create",
-          element: <CreatBlogPost />
+          element: <CreatBlogPost whitelabelId={props.whitelabelId}/>
         },
         {
           path: "/login",
@@ -69,7 +68,7 @@ const MainPage: React.FC<Props> = (props) => {
           element: <Signup whitelabelId={props.whitelabelId}></Signup>
         }
       ],
-      errorElement: <DisplayBlog />
+      errorElement: <DisplayPostList whitelabelId={props.whitelabelId}/>
     }
   ];
 
