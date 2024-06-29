@@ -1,5 +1,4 @@
 import React from "react";
-import './Signup.css'
 import axios from 'axios';
 import ThemeContext from "../../Utils/ThemeContext";
 

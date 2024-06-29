@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import ThemeContext from "./Utils/ThemeContext";
 import App from "./App";
 import { getThemeColor, themingProps } from '../src/Constants/Theme';
-const whitelabelId = "3";
+const whitelabelId = "1";
 
 const rootElement = document.getElementById("root")!;
 const root = ReactDOM.createRoot(rootElement);
