@@ -9,7 +9,7 @@ import appStore from "./Store/appStore";
 
 const getWhitelabelId = (hostName: string): string => {
   switch(hostName){
-    case "http://127.0.0.1:3001":
+    case "https://lays-blog-spot.vercel.app/":
       return "1"
     case "http://127.0.0.1:3002":
       return "2"
