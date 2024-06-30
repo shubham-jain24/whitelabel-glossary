@@ -16,7 +16,11 @@ const DisplayPostList: React.FC<Props> = (props) => {
         const body = {
             "whitelabelId": props.whitelabelId,
         }
-        axios.post('/Prod/GetPost', (body))
+        axios.post('/Prod/GetPost', (JSON.stringify(body)), {
+            headers: {
+                'Content-Type': 'text/plain'
+            }
+        })
         .then(response => {
             const blogData: BlogPostData[] = response?.data?.body?.data
             setPostList(blogData)
