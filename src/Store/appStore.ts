@@ -10,3 +10,4 @@ const appStore = configureStore({
 })
 
 export default appStore
+export type IRootState = ReturnType<typeof appStore.getState>

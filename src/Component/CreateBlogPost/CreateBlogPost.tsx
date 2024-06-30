@@ -6,6 +6,7 @@ import { v4 as uuidv4} from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import { UserDetails } from "../../Store/UserDetails";
 import { useSelector } from 'react-redux';
+import { IRootState } from "../../Store/appStore";
 
 
 type Props = {
@@ -13,7 +14,7 @@ type Props = {
 }
 
 const CreatBlogPost: React.FC<Props> = (props) => {
-    const userDetails: UserDetails = useSelector(store => store.user.userDetails);
+    const userDetails: UserDetails = useSelector((store: IRootState) => store.user.userDetails);
     const navigate = useNavigate();
     const [shimmer, setShimmer ] = useState(true);
 

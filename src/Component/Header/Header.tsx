@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import ThemeContext from "../../Utils/ThemeContext";
+import logo1 from '../../Assets/Images/Logo/1.png';
+import logo2 from '../../Assets/Images/Logo/2.png';
+import logo3 from '../../Assets/Images/Logo/3.png';
+
 
 export type HeaderProps = {
   logo: string;
@@ -14,9 +18,21 @@ const Header: React.FC<Props> = (props) => {
   const themeContext = React.useContext(ThemeContext);
 
   const headerLogo = () => {
+    const getLogo = (whitelabelId: string) => {
+      switch(whitelabelId){
+        case "1":
+          return (<img src={logo1} />);
+        case "2":
+          return (<img src={logo2} />);
+        case "3":
+          return (<img src={logo3} />);
+        default:
+          return (<></>);
+      }
+    }
     return (
       <span className="flex p-2 w-24">
-        <img src={`src/Assets/Images/Logo/${props.whitelabelId}.png`} />
+        {getLogo(props.whitelabelId)}
       </span>
     );
   };

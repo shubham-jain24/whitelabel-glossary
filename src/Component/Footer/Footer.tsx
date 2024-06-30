@@ -1,5 +1,12 @@
 import React from "react";
 import ThemeContext from "../../Utils/ThemeContext";
+import facebook from '../../Assets/Images/Logo/Facebook.png';
+import instagram from '../../Assets/Images/Logo/Instagram.png';
+import twitter from '../../Assets/Images/Logo/Twitter.png';
+import phone from '../../Assets/Images/Logo/Phone.png';
+import email from '../../Assets/Images/Logo/Email.png';
+
+
 
 type OwnProps = {
   email: string;
@@ -17,14 +24,14 @@ const Footer: React.FC<Props> = (props) => {
         <div className={`flex items-center p-2 ${themeContext.textFourth}`}>
           <img
             className="w-6 me-2"
-            src="src/Assets/Images/Logo/Email.png"
+            src={email}
           />
           <span>{props.email}</span>
         </div>
         <div className={`flex items-center p-2 ${themeContext.textFourth}`}>
           <img
             className="w-6 me-2"
-            src="src/Assets/Images/Logo/Phone.png"
+            src={phone}
           />
           <span>{props.phone}</span>
         </div>
@@ -37,15 +44,15 @@ const Footer: React.FC<Props> = (props) => {
       <div className="flex flex-row">
         <img
           className="w-10 h-10 m-2 aspect-square mix-blend-multiply"
-          src="src/Assets/Images/Logo/Twitter.png"
+          src={twitter}
         />
         <img
           className="w-10 h-10 m-2 aspect-square mix-blend-multiply"
-          src="src/Assets/Images/Logo/Facebook.png"
+          src={facebook}
         />
         <img
           className="w-10 h-10 m-2 aspect-square mix-blend-multiply"
-          src="src/Assets/Images/Logo/Instagram.png"
+          src={instagram}
         />
       </div>
     );

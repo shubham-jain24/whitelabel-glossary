@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateUserDetails } from "../../Store/userSlice";
 import { UserDetails } from "../../Store/UserDetails";
 import { useNavigate } from "react-router-dom";
+import { IRootState } from "../../Store/appStore";
 
 type Props = {}
 const Navbar: React.FC<Props> = (props) => {
-    const userDetails: UserDetails = useSelector((store) => store.user.userDetails);
+    const userDetails: UserDetails = useSelector((store: IRootState) => store.user.userDetails);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
