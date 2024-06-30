@@ -1,11 +1,5 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "*.tsx",
-            "use": "@vercel/node"
-        }
-    ],
     "headers": [
         {
         "source": "/Prod/(.*)",
