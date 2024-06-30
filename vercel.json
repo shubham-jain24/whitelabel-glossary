@@ -1,0 +1,20 @@
+{
+    "redirects": [
+        {
+            "source": "/Prod/CreatePost",
+            "destination": "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/CreatePost"
+        },
+        {
+            "source": "/Prod/GetPost",
+            "destination": "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/GetPost"
+        },
+        {
+            "source": "/Prod/Login",
+            "destination": "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/Login"
+        },
+        {
+            "source": "/Prod/Register",
+            "destination": "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/Register"
+        }
+    ]
+}
