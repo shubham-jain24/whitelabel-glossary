@@ -21,7 +21,11 @@ const Signup: React.FC<Props> = (props) => {
             "email": email,
             "password": password  
         }
-        axios.post('/Prod/Register', (body))
+        axios.post('/Prod/Register', JSON.stringify(body), {
+            headers: {
+                'Content-Type': 'text/plain'
+            }
+        })
         .then(response => {
             console.log(response)
         })

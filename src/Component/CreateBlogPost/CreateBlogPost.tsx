@@ -60,7 +60,11 @@ const CreatBlogPost: React.FC<Props> = (props) => {
             "userName": userDetails.userName,
             "age": userDetails.age
         }
-        axios.post('/Prod/CreatePost', (body))
+        axios.post('/Prod/CreatePost', JSON.stringify(body), {
+            headers: {
+                'Content-Type': 'text/plain'
+            }
+        })
         .then(response => {
             setEditorContent("");
         })
