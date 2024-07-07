@@ -17,15 +17,11 @@ const DisplayPostList: React.FC<Props> = (props) => {
       whitelabelId: props.whitelabelId,
     };
     axios
-      .post(
-        "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/CreatePost",
-        JSON.stringify(body),
-        {
-          headers: {
-            "Content-Type": "text/plain",
-          },
+      .post("/Prod/GetPost", JSON.stringify(body), {
+        headers: {
+          "Content-Type": "text/plain",
         },
-      )
+      })
       .then((response) => {
         const blogData: BlogPostData[] = response?.data?.body?.data;
         setPostList(blogData);
