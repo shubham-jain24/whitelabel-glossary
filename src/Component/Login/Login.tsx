@@ -23,8 +23,13 @@ const Login: React.FC<Props> = (props) => {
       email: email,
       password: password,
     };
+
     axios
-      .post("/Prod/Login", body)
+      .post("/Prod/Login", JSON.stringify(body), {
+        headers: {
+          "Content-Type": "text/plain",
+        },
+      })
       .then((response) => {
         if (response.data.body.status == "Success") {
           const result = response.data.body;

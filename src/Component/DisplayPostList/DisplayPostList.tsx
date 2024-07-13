@@ -16,20 +16,15 @@ const DisplayPostList: React.FC<Props> = (props) => {
     const body = {
       whitelabelId: props.whitelabelId,
     };
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    };
-    fetch("/Prod/GetPost", requestOptions)
-      .then((response) => {
-        return response.json();
+    axios
+      .post("/Prod/GetPost", JSON.stringify(body), {
+        headers: {
+          "Content-Type": "text/plain",
+        },
       })
-      .then((data) => {
-        console.log(data.body.data);
-        const blogData: BlogPostData[] = data.body.data;
+      .then((response) => {
+        console.log(response.data.body.data);
+        const blogData: BlogPostData[] = response.data.body.data;
         setPostList(blogData);
       })
       .catch((error) => {
