@@ -17,12 +17,16 @@ const DisplayPostList: React.FC<Props> = (props) => {
       whitelabelId: props.whitelabelId,
     };
     axios
-      .post("/Prod/GetPost", JSON.stringify(body), {
-        headers: {
-          "Content-Type": "text/plain",
-          "Access-Control-Allow-Origin": "*",
-        },
-      })
+      .post(
+        "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/GetPost",
+        body,
+        {
+          headers: {
+            "Content-Type": "text/plain",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      )
       .then((response) => {
         console.log(response.data.body.data);
         const blogData: BlogPostData[] = response.data.body.data;
