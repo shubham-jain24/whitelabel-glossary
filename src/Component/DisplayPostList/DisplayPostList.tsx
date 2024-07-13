@@ -20,6 +20,7 @@ const DisplayPostList: React.FC<Props> = (props) => {
       .post("/Prod/GetPost", JSON.stringify(body), {
         headers: {
           "Content-Type": "text/plain",
+          "Access-Control-Allow-Origin": "*",
         },
       })
       .then((response) => {
