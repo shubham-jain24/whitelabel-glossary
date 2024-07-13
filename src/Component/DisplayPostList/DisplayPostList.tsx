@@ -19,13 +19,7 @@ const DisplayPostList: React.FC<Props> = (props) => {
     axios
       .post(
         "https://6ijq8h7rq7.execute-api.eu-north-1.amazonaws.com/Prod/GetPost",
-        body,
-        {
-          headers: {
-            "Content-Type": "text/plain",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
+        body
       )
       .then((response) => {
         console.log(response.data.body.data);
