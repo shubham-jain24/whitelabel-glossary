@@ -17,7 +17,7 @@ Whitelabels are partner companies that use our product with their branding, ensu
 
 ## Live Demo
 [![Live Demo - BMW](https://img.shields.io/badge/Live%20Demo-BMW-blue?logo=bmw&logoColor=white&style=for-the-badge)](https://bmw-blog-spot.vercel.app/)
-[![Live Demo - Lay's](https://img.shields.io/badge/Live%20Demo-Lay's-red?logo=lays&logoColor=white&style=for-the-badge&color=F70000)]([https://www.lays.com/](https://lays-blog-spot.vercel.app/))
+[![Live Demo - Lay's](https://img.shields.io/badge/Live%20Demo-Lay's-red?logo=lays&logoColor=white&style=for-the-badge&color=F70000)](https://lays-blog-spot.vercel.app/)
 [![Live Demo - Siemens](https://img.shields.io/badge/Live%20Demo-Siemens-tint?logo=siemens&logoColor=white&style=for-the-badge)](https://siemens-blog-spot.vercel.app/)
 
 ## Features
