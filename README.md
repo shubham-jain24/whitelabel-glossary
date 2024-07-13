@@ -15,6 +15,11 @@ This application provides a common codebase to serve different whitelabel partne
 
 Whitelabels are partner companies that use our product with their branding, ensuring that consumers will never know they are using the same platform.
 
+## Live Demo
+[![Live Demo - BMW](https://img.shields.io/badge/Live%20Demo-BMW-blue?logo=bmw&logoColor=white&style=for-the-badge)](https://bmw-blog-spot.vercel.app/)
+[![Live Demo - Lay's](https://img.shields.io/badge/Live%20Demo-Lay's-red?logo=lays&logoColor=white&style=for-the-badge&color=F70000)]([https://www.lays.com/](https://lays-blog-spot.vercel.app/))
+[![Live Demo - Siemens](https://img.shields.io/badge/Live%20Demo-Siemens-tint?logo=siemens&logoColor=white&style=for-the-badge)](https://siemens-blog-spot.vercel.app/)
+
 ## Features
 
 This application currently serves three different companies, providing each with their own workspace. Employees of these companies can:
@@ -46,5 +51,7 @@ The application is built using:
   - AWS Lambda
   - AWS API Gateway
   - DynamoDB (database)
+ 
+Note: These Brands are just for example, not the live site 
 
 
